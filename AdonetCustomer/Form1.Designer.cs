@@ -47,11 +47,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(57, 51);
+            this.label1.Location = new System.Drawing.Point(59, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 18);
+            this.label1.Size = new System.Drawing.Size(55, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Şehir ID:";
+            this.label1.Text = "City ID:";
             // 
             // textBox1
             // 
@@ -71,11 +71,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(51, 82);
+            this.label2.Location = new System.Drawing.Point(33, 82);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 18);
+            this.label2.Size = new System.Drawing.Size(81, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Şehir Adı:";
+            this.label2.Text = "City Name:";
             // 
             // textBox3
             // 
@@ -88,11 +88,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(79, 113);
+            this.label3.Location = new System.Drawing.Point(50, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 18);
+            this.label3.Size = new System.Drawing.Size(64, 18);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Ülke:";
+            this.label3.Text = "Country:";
             // 
             // button1
             // 
@@ -101,7 +101,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(245, 38);
             this.button1.TabIndex = 6;
-            this.button1.Text = "Listele";
+            this.button1.Text = "List";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -121,7 +121,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(245, 38);
             this.button2.TabIndex = 8;
-            this.button2.Text = "Ekle";
+            this.button2.Text = "Add";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -131,7 +131,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(245, 38);
             this.button3.TabIndex = 9;
-            this.button3.Text = "Sil";
+            this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -141,7 +141,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(245, 38);
             this.button4.TabIndex = 10;
-            this.button4.Text = "Güncelle";
+            this.button4.Text = "Update";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -151,7 +151,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(245, 38);
             this.button5.TabIndex = 11;
-            this.button5.Text = "Ara";
+            this.button5.Text = "Search";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
