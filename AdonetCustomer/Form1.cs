@@ -18,17 +18,34 @@ namespace AdonetCustomer
             InitializeComponent();
         }
 
+        SqlConnection sqlConnection = new SqlConnection("Server=1LP021\\SQLEXPRESS;initial catalog=DbCustomer;" +
+            "integrated security=true;TrustServerCertificate=true");
+
         private void btnList_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlConnection = new SqlConnection("Server=1LP021\\SQLEXPRESS;initial catalog=DbCustomer;" +
-                "integrated security=true;TrustServerCertificate=true");
+        
 
             sqlConnection.Open();
             SqlCommand command = new SqlCommand("Select * from TblCity", sqlConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
             sqlConnection.Close();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("insert into TblCity (CityName,CityCountry) values" +
+                "(@cityName,@cityCountry)",sqlConnection);
+            
+            command.Parameters.AddWithValue("@cityName", txtCityName.Text);
+            command.Parameters.AddWithValue("@cityCountry", txtCityCountry.Text);
+            command.ExecuteNonQuery();
+            
+            sqlConnection.Close();
+            MessageBox.Show("City added successfully");
         }
     }
 }

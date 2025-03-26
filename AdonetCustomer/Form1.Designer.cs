@@ -32,7 +32,7 @@
             this.txtCityId = new System.Windows.Forms.TextBox();
             this.txtCityName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.txtCityCountry = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnList = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -77,12 +77,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "City Name:";
             // 
-            // txtCountry
+            // txtCityCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(120, 109);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(179, 22);
-            this.txtCountry.TabIndex = 5;
+            this.txtCityCountry.Location = new System.Drawing.Point(120, 109);
+            this.txtCityCountry.Name = "txtCityCountry";
+            this.txtCityCountry.Size = new System.Drawing.Size(179, 22);
+            this.txtCityCountry.TabIndex = 5;
             // 
             // label3
             // 
@@ -107,6 +107,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(351, 47);
             this.dataGridView1.Name = "dataGridView1";
@@ -124,6 +125,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -167,7 +169,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnList);
-            this.Controls.Add(this.txtCountry);
+            this.Controls.Add(this.txtCityCountry);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCityName);
             this.Controls.Add(this.label2);
@@ -187,7 +189,7 @@
         private System.Windows.Forms.TextBox txtCityId;
         private System.Windows.Forms.TextBox txtCityName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.TextBox txtCityCountry;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnList;
         private System.Windows.Forms.DataGridView dataGridView1;
