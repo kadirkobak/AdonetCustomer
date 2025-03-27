@@ -16,5 +16,11 @@ namespace AdonetCustomer
         {
             InitializeComponent();
         }
+
+        private void btnOpenCityForm_Click(object sender, EventArgs e)
+        {
+            FrmCity frmCity = new FrmCity();
+            frmCity.Show(); 
+        }
     }
 }

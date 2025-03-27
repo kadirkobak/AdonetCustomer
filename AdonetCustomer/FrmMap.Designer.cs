@@ -42,6 +42,7 @@
             this.btnOpenCityForm.TabIndex = 0;
             this.btnOpenCityForm.Text = "City Transaction";
             this.btnOpenCityForm.UseVisualStyleBackColor = true;
+            this.btnOpenCityForm.Click += new System.EventHandler(this.btnOpenCityForm_Click);
             // 
             // btnOpenCustomerForm
             // 
