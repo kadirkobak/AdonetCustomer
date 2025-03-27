@@ -47,6 +47,7 @@
             this.cmbCustomerCity = new System.Windows.Forms.ComboBox();
             this.rdbActive = new System.Windows.Forms.RadioButton();
             this.rdbInactive = new System.Windows.Forms.RadioButton();
+            this.btnProcedure = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,10 +107,11 @@
             this.btnList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnList.Location = new System.Drawing.Point(90, 250);
             this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(245, 38);
+            this.btnList.Size = new System.Drawing.Size(114, 38);
             this.btnList.TabIndex = 18;
             this.btnList.Text = "List";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // txtCustomerSurname
             // 
@@ -229,12 +231,23 @@
             this.rdbInactive.Text = "inactive";
             this.rdbInactive.UseVisualStyleBackColor = true;
             // 
+            // btnProcedure
+            // 
+            this.btnProcedure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnProcedure.Location = new System.Drawing.Point(210, 250);
+            this.btnProcedure.Name = "btnProcedure";
+            this.btnProcedure.Size = new System.Drawing.Size(125, 38);
+            this.btnProcedure.TabIndex = 33;
+            this.btnProcedure.Text = "Procedure";
+            this.btnProcedure.UseVisualStyleBackColor = true;
+            // 
             // FrmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1129, 535);
+            this.Controls.Add(this.btnProcedure);
             this.Controls.Add(this.rdbInactive);
             this.Controls.Add(this.rdbActive);
             this.Controls.Add(this.cmbCustomerCity);
@@ -283,5 +296,6 @@
         private System.Windows.Forms.ComboBox cmbCustomerCity;
         private System.Windows.Forms.RadioButton rdbActive;
         private System.Windows.Forms.RadioButton rdbInactive;
+        private System.Windows.Forms.Button btnProcedure;
     }
 }
