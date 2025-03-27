@@ -42,10 +42,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtCustomerBalance = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtCustomerCity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCustomerStatus = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.cmbCustomerCity = new System.Windows.Forms.ComboBox();
+            this.rdbActive = new System.Windows.Forms.RadioButton();
+            this.rdbInactive = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +98,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(724, 329);
+            this.dataGridView1.Size = new System.Drawing.Size(724, 424);
             this.dataGridView1.TabIndex = 19;
             // 
             // btnList
@@ -178,13 +179,6 @@
             this.label4.TabIndex = 24;
             this.label4.Text = "Customer Balance:";
             // 
-            // txtCustomerCity
-            // 
-            this.txtCustomerCity.Location = new System.Drawing.Point(156, 164);
-            this.txtCustomerCity.Name = "txtCustomerCity";
-            this.txtCustomerCity.Size = new System.Drawing.Size(179, 22);
-            this.txtCustomerCity.TabIndex = 27;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -194,13 +188,6 @@
             this.label5.Size = new System.Drawing.Size(107, 18);
             this.label5.TabIndex = 26;
             this.label5.Text = "Customer City:";
-            // 
-            // txtCustomerStatus
-            // 
-            this.txtCustomerStatus.Location = new System.Drawing.Point(156, 192);
-            this.txtCustomerStatus.Name = "txtCustomerStatus";
-            this.txtCustomerStatus.Size = new System.Drawing.Size(179, 22);
-            this.txtCustomerStatus.TabIndex = 29;
             // 
             // label6
             // 
@@ -212,15 +199,46 @@
             this.label6.TabIndex = 28;
             this.label6.Text = "Customer Status:";
             // 
+            // cmbCustomerCity
+            // 
+            this.cmbCustomerCity.FormattingEnabled = true;
+            this.cmbCustomerCity.Location = new System.Drawing.Point(156, 162);
+            this.cmbCustomerCity.Name = "cmbCustomerCity";
+            this.cmbCustomerCity.Size = new System.Drawing.Size(179, 24);
+            this.cmbCustomerCity.TabIndex = 30;
+            // 
+            // rdbActive
+            // 
+            this.rdbActive.AutoSize = true;
+            this.rdbActive.Location = new System.Drawing.Point(156, 194);
+            this.rdbActive.Name = "rdbActive";
+            this.rdbActive.Size = new System.Drawing.Size(64, 20);
+            this.rdbActive.TabIndex = 31;
+            this.rdbActive.TabStop = true;
+            this.rdbActive.Text = "active";
+            this.rdbActive.UseVisualStyleBackColor = true;
+            // 
+            // rdbInactive
+            // 
+            this.rdbInactive.AutoSize = true;
+            this.rdbInactive.Location = new System.Drawing.Point(226, 194);
+            this.rdbInactive.Name = "rdbInactive";
+            this.rdbInactive.Size = new System.Drawing.Size(74, 20);
+            this.rdbInactive.TabIndex = 32;
+            this.rdbInactive.TabStop = true;
+            this.rdbInactive.Text = "inactive";
+            this.rdbInactive.UseVisualStyleBackColor = true;
+            // 
             // FrmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Khaki;
             this.ClientSize = new System.Drawing.Size(1129, 535);
-            this.Controls.Add(this.txtCustomerStatus);
+            this.Controls.Add(this.rdbInactive);
+            this.Controls.Add(this.rdbActive);
+            this.Controls.Add(this.cmbCustomerCity);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtCustomerCity);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtCustomerBalance);
             this.Controls.Add(this.label4);
@@ -260,9 +278,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCustomerBalance;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCustomerCity;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCustomerStatus;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbCustomerCity;
+        private System.Windows.Forms.RadioButton rdbActive;
+        private System.Windows.Forms.RadioButton rdbInactive;
     }
 }
