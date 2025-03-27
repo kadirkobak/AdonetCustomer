@@ -77,5 +77,15 @@ namespace AdonetCustomer
             command.ExecuteNonQuery();
             sqlConnection.Close();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("delete from TblCustomer where CustomerId=@customerId", sqlConnection);
+            command.Parameters.AddWithValue("@customerId", txtCustomerId.Text);
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+            MessageBox.Show("Customer deleted successfully");
+        }
     }
 }
