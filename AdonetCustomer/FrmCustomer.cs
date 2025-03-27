@@ -31,5 +31,16 @@ namespace AdonetCustomer
             dataGridView1.DataSource = dataTable;
             sqlConnection.Close();
         }
+
+        private void btnProcedure_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("Execute CustomerListWithCity", sqlConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            sqlConnection.Close();
+        }
     }
 }
