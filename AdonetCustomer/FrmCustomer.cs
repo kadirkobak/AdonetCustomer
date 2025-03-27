@@ -55,5 +55,27 @@ namespace AdonetCustomer
             cmbCustomerCity.DataSource = dataTable;
             sqlConnection.Close();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("insert into TblCustomer (CustomerName,CustomerSurname,CustomerBalance,CustomerStatus,CustomerCity) values" +
+                "(@customerName,@customerSurname,@customerBalance,@customerStatus,@customerCity)", sqlConnection);
+            command.Parameters.AddWithValue("@customerName", txtCustomerName.Text);
+            command.Parameters.AddWithValue("@customerSurname", txtCustomerSurname.Text);
+            command.Parameters.AddWithValue("@customerBalance", txtCustomerBalance.Text);           
+            command.Parameters.AddWithValue("@customerCity", cmbCustomerCity.SelectedValue);
+
+            if (rdbActive.Checked)
+            {
+                command.Parameters.AddWithValue("@customerStatus", true);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@customerStatus", false);
+            }
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+        }
     }
 }
