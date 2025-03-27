@@ -113,5 +113,17 @@ namespace AdonetCustomer
             sqlConnection.Close();
             MessageBox.Show("Customer updated successfully");
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("Select CustomerId,CustomerName,CustomerSurname,CustomerBalance,CustomerStatus,CityName From \r\nTblCustomer Inner Join TblCity On TblCity.CityId=TblCustomer.CustomerCity Where CustomerName=@customerName", sqlConnection);
+            command.Parameters.AddWithValue("@CustomerName", txtCustomerName.Text); 
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            sqlConnection.Close();
+        }
     }
 }
