@@ -87,5 +87,31 @@ namespace AdonetCustomer
             sqlConnection.Close();
             MessageBox.Show("Customer deleted successfully");
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("update TblCustomer set CustomerName=@customerName," +
+                "CustomerSurname=@customerSurname" +",CustomerBalance=@customerBalance," +
+                "CustomerStatus=@customerStatus,CustomerCity=@customerCity where CustomerId=@customerId", sqlConnection);
+            command.Parameters.AddWithValue("@customerName", txtCustomerName.Text);
+            command.Parameters.AddWithValue("@customerSurname", txtCustomerSurname.Text);
+            command.Parameters.AddWithValue("@customerBalance", txtCustomerBalance.Text);
+            command.Parameters.AddWithValue("@customerCity", cmbCustomerCity.SelectedValue);
+            command.Parameters.AddWithValue("@customerId", txtCustomerId.Text);
+
+            if (rdbActive.Checked)
+            {
+                command.Parameters.AddWithValue("@customerStatus", true);
+            }
+            else
+            {
+                command.Parameters.AddWithValue("@customerStatus", false);
+            }
+            command.ExecuteNonQuery();
+            sqlConnection.Close();
+            MessageBox.Show("Customer updated successfully");
+        }
     }
 }
