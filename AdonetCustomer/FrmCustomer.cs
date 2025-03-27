@@ -42,5 +42,18 @@ namespace AdonetCustomer
             dataGridView1.DataSource = dataTable;
             sqlConnection.Close();
         }
+
+        private void FrmCustomer_Load(object sender, EventArgs e)
+        {
+            sqlConnection.Open();
+            SqlCommand command = new SqlCommand("Select * From TblCity", sqlConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            cmbCustomerCity.ValueMember = "CityId";
+            cmbCustomerCity.DisplayMember = "CityName";
+            cmbCustomerCity.DataSource = dataTable;
+            sqlConnection.Close();
+        }
     }
 }
